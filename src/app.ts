@@ -1,6 +1,5 @@
 import express, { application } from 'express';
 import cors from 'cors';
-
 import routes from './routes'
 
 class App { 

@@ -1,4 +1,5 @@
 import { Router, Request, Response } from 'express';
+import metricServices from '../services/metricServices';
 
 class MetricController {
 
