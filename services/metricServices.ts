@@ -1,8 +1,8 @@
-import MetricController from "../controllers/MetricController";
-import Metric from "../models/metricModel";
+// import MetricController from "../controllers/MetricController";
+// import Metric from "../models/metricModel";
 
 class metricServices {
-    public getSimpleMetrics(): Array<T>{
+    public getSimpleMetrics(): Array<Object>{
         let metrics = [
             {
                 metric_name: "Conversations",
@@ -117,22 +117,24 @@ class metricServices {
             }
         ]
 
-        let metrics_test = [            
-            "Conversations",
-            2500,
-            null,
-            null,
-            true,
-        ]
+        // let metrics_test = [            
+        //     "Conversations",
+        //     2500,
+        //     null,
+        //     null,
+        //     true,
+        // ]
 
-        let args = metrics_test[0]
-        const obj = new Metric(args)
-        console.log(obj)
+        // let args = metrics_test[0]
+        // const obj = new Metric(args)
+        // console.log(obj)
 
         // metrics.forEach((metric) => {
         //     const obj = new Metric([...metric]);
         // })
+
+        return metrics;
     }
 }
 
-export default metricServices;
+export default new metricServices();

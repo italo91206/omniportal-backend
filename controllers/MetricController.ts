@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import metricServices from '../services/metricServices';
+import service from '../services/metricServices';
 
 class MetricController {
 
@@ -12,7 +12,7 @@ class MetricController {
 
     public routes(): void{
         this.router.get("/", async (req: Request, res: Response): Promise<Response> => {
-            let data = "GET - Hello world";
+            let data = service.getSimpleMetrics();
             return res.json(data)
         })
 
